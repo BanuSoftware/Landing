@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+:root {
+  --brand: 22, 163, 74;
+}
+
+
+@font-face {
+  font-family: "Indivisible";
+  src: url("./assets/fonts/fonnts.com-Indivisible_Variable.otf") format("opentype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Indivisible";
+  src: url("./assets/fonts/fonnts.com-Indivisible_Variable_Italic.otf") format("opentype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
