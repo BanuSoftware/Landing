@@ -1,45 +1,46 @@
-import React from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
-import { motion } from "framer-motion";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 function App() {
+  const boxRef = useRef(null);
 
-  const boxRef = useRef(null)
+  useGSAP(() => {
+    gsap.to(boxRef.current, { x: 200, duration: 1 });
+  }, []);
 
-  useGSAP(()=>{
-    gsap.to(boxRef.current, {x: 200})
-  }, {})
+  return (
+    <>
+      <motion.div
+        className="text-[rgb(var(--brand))] text-xl border-2 border-[rgb(var(--brand))] 
+                  w-72 h-12 flex items-center justify-center m-10"
+      >
+        Tailwind Config OK
+      </motion.div>
 
+      <div
+        ref={boxRef}
+        className="w-48 h-48 bg-[rgb(var(--brand))] flex justify-center items-center 
+                  text-4xl text-white"
+      >
+        box
+      </div>
+      <div className="p-10 space-y-4 font-[Indivisible]">
+        <p className="font-thin">Thin</p>
+        <p className="font-light">Light</p>
+        <p className="font-normal">Regular</p>
+        <p className="font-medium">Medium</p>
+        <p className="font-semibold">Semibold</p>
+        <p className="font-bold">Bold</p>
+        <p className="font-black">Black</p>
 
-
-    return (
-      <>
-        <motion.div style={{
-            color: 'green',
-            fontSize: 20,
-            width: '300px',
-            height: '30px',
-            textAlign: 'center',
-            border: '2px solid green',
-            margin: '40px'
-        }}
-
-            whileHover={{ scale: 0.5 }}
-        >
-            test
-        </motion.div>
-
-        <div ref={boxRef} className="w-50 h-50 bg-blue-500 flex justify-center items-center text-4xl">
-          box
-        </div>
-      
-      
-      </>
-        
-        
-    );
+        <p className="italic font-medium">
+          Medium Italic
+        </p>
+      </div>
+    </>
+  );
 }
 
 export default App;

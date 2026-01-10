@@ -1,7 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --brand: 22, 163, 74;
+  --bg: 255, 255, 255;
+  --bg-toggle: 249, 249, 249;
+  --text-toggle: 147, 147, 147;
+  --bg-selected: 0, 0, 0;
+  --text-selected: 255, 255, 255;
+  --bg-primary-card: 206, 83, 104;
+  --text-card: 255, 255, 255;
+  --bg-secondary-card: 143, 52, 67;
+  --bg-thirdary-card: 247, 130, 149;
 }
 
 
