@@ -1,7 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --brand: 22, 163, 74;
+  --bg: 255, 255, 255;
+  --bg-toggle: 249, 249, 249;
+  --text-toggle: 147, 147, 147;
+  --bg-selected: 0, 0, 0;
+  --text-selected: 255, 255, 255;
+  --bg-primary-card: 206, 83, 104;
+  --text-card: 255, 255, 255;
+  --bg-secondary-card: 143, 52, 67;
+  --bg-thirdary-card: 247, 130, 149;
 }
 
 
@@ -13,10 +21,8 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Indivisible";
-  src: url("./assets/fonts/fonnts.com-Indivisible_Variable_Italic.otf") format("opentype");
-  font-weight: 100 900;
-  font-style: italic;
-  font-display: swap;
+* {
+  font-family: "Indivisible", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
