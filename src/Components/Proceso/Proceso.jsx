@@ -35,7 +35,7 @@ const Proceso = () => {
   
   return (
     <>
-      <p className='font-medium text-6xl max-w-114 m-auto tracking-[-0.07em] text-center'>Asi llevamos tu idea a la realidad</p>
+      <p className='font-medium text-6xl max-w-114 m-auto tracking-[-0.07em] text-center mt-28'>Asi llevamos tu idea a la realidad</p>
       <div className='max-w-lg m-auto'>
         <div className='w-1/2'></div>
         <div className='max-w-58 font-medium text-[16px] tracking-[-0.07em] mt-12 m-auto ml-70 indent-5 leading-none mb-24'>Cuatro pasos claros para avanzar contigo de forma cercana y eficiente, cuidando cada detalle a lo largo del camino.</div>
