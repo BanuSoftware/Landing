@@ -4,27 +4,6 @@ import { useState } from 'react';
 const Carpeta = ({ title, step, description, color, textColor, index }) => {
   const [isHovered, setIsHovered] = useState(false);
   
-  const wrapText = (text, maxWidth) => {
-    const words = text.split(' ');
-    const lines = [];
-    let currentLine = '';
-    
-    words.forEach((word) => {
-      const testLine = currentLine + (currentLine ? ' ' : '') + word;
-      if (testLine.length <= maxWidth) {
-        currentLine = testLine;
-      } else {
-        if (currentLine) lines.push(currentLine);
-        currentLine = word;
-      }
-    });
-    if (currentLine) lines.push(currentLine);
-    
-    return lines;
-  };
-  
-  const textLines = wrapText(description || '', 50);
-  
   return (
     <div 
       className="absolute w-full transition-all duration-500 ease-out cursor-pointer"
@@ -35,6 +14,7 @@ const Carpeta = ({ title, step, description, color, textColor, index }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+      {/* SVG solo con las formas (sin texto) */}
       <svg 
         width="1308" 
         height="668" 
@@ -42,7 +22,7 @@ const Carpeta = ({ title, step, description, color, textColor, index }) => {
         fill="none" 
         xmlns="http://www.w3.org/2000/svg"
         className={`transition-transform duration-500 ease-out ${
-          isHovered ? ' -translate-y-25' : ''
+          isHovered ? '-translate-y-30' : ''
         }`}
       >
         {/* Path principal */}
@@ -56,46 +36,60 @@ const Carpeta = ({ title, step, description, color, textColor, index }) => {
           d="M6.43489 44.8156C3.5454 20.9891 22.1429 0 46.144 0H340.329C354.149 0 366.99 7.13392 374.291 18.8679L445.776 133.754C460.993 158.209 446.153 190.247 417.659 194.456L72.1121 245.501C49.8553 248.789 29.2662 233.08 26.5576 210.746L6.43489 44.8156Z" 
           className={color}
         />
-        
-        {/* Título */}
-        <text
-          x="80"
-          y="180"
-          textAnchor="start"
-          className={`text-8xl font-medium transition-colors tracking-[-0.07em] duration-500 ${
-            isHovered ? 'fill-white' : textColor
-          }`}
-        >
-          {title}
-        </text>
-        
-        {/* Número de paso */}
-        <text
-          x="1240"
-          y="180"
-          textAnchor="end"
-          className={`text-8xl font-medium transition-colors tracking-[-0.07em] duration-500 ${
-            isHovered ? 'fill-white' : textColor
-          }`}
-        >
-          {step}
-        </text>
-        
-        {/* Descripcion*/}
-        {textLines.map((line, idx) => (
-          <text
-            key={idx}
-            x="800"
-            y={220 + (idx * 15)}
-            textAnchor="middle"
-            className={`text-[16px] font-normal transition-opacity tracking-[-0.02em] duration-500 fill-white ${
-              isHovered ? 'opacity-100' : 'opacity-0'
+      </svg>
+      
+      {/* Todo el contenido HTML encima */}
+      <div 
+        className={`absolute left-0 w-full transition-all duration-500 ${
+          isHovered ? '-translate-y-30' : ''
+        }`}
+        style={{ top: '52px' }}
+      >
+        {/* Título y Step */}
+        <div className="flex justify-between items-center px-20 mt-14">
+          <h3 
+            className={`text-8xl font-medium tracking-[-0.07em] transition-colors duration-500 ${
+              isHovered ? 'text-white' : textColor
             }`}
           >
-            {line}
-          </text>
-        ))}
-      </svg>
+            {title}
+          </h3>
+          
+          <span 
+            className={`text-8xl font-medium tracking-[-0.07em] transition-colors duration-500 ${
+              isHovered ? 'text-white' : textColor
+            }`}
+          >
+            {step}
+          </span>
+        </div>
+
+        {/* Descripción y Link */}
+        <div 
+          className={`transition-opacity duration-700 ${
+            isHovered ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          {/* Contenedor para posicionar a 3/4 */}
+          <div className="relative w-full px-8">
+            <div className="ml-[50%]">
+              <p className="text-white font-medium text-[18px] tracking-[-0.07em] max-w-81 leading-none mt-6 indent-5">
+                {description}
+              </p>
+              
+              {/* Link justo abajo del texto */}
+              {index === 3 && (
+                <a 
+                  href="mailto:studio@banu.com.mx" 
+                  className="inline-block text-white font-medium tracking-[-0.07em] underline hover:opacity-80 transition-opacity mt-6"
+                >
+                  Cuéntanos tu idea →
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
