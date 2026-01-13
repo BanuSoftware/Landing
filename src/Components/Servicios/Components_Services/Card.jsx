@@ -58,7 +58,7 @@ function Card({ title, description, icon, banner, position }) {
       <p
         className="
           text-[14px]
-          font-extralight
+          font-light
           text-white
           text-center
           mt-2

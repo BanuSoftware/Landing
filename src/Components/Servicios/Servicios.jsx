@@ -28,9 +28,9 @@ function Carousel() {
     {
       id: 3,
       title: "Desarrollo Móvil",
-      description: "Aplicaciones móviles nativas e híbridas para iOS y Android con la mejor experiencia.",
+      description: "Construimos experiencias web completas, desde páginas que venden hasta productos web interactivos.",
       icon: new URL("../../Assets/Images/Banana.png", import.meta.url).href,
-      banner: new URL("../../Assets/Images/FlowerBanner.png", import.meta.url).href,
+      banner: new URL("../../Assets/Images/Habitree.png", import.meta.url).href,
       category: "Mobile"
     },
     {

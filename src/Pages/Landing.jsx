@@ -1,16 +1,17 @@
+import VisionMision from "../Components/VisionMision/VisionMision.jsx";
 import Carousel from "../Components/Servicios/Servicios.jsx";
-import Valores from "../Components/Valores/Valores.jsx";
+import Proceso from "../Components/Proceso/Proceso.jsx";
+import Valores from "../Components/Valores/components_valores/ContenidoValores.jsx";
 
 function Landing() {
   return (
-    <>
-      <div className="min-h-screen bg-white">
-        <Carousel />
-      </div>
-      <div className="min-h-screen bg-white">
-        <Valores />
-      </div>
-    </>
+    <div className="min-h-screen bg-white">
+      <VisionMision />
+      <Carousel />
+      <Proceso />
+      <Valores />
+
+    </div>
   );
 }
 

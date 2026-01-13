@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Indivisible";
+  src: url("./assets/fonts/fonnts.com-Indivisible_Variable.otf") format("opentype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  font-family: "Indivisible", sans-serif;
+}
