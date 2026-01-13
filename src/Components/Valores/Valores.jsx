@@ -60,7 +60,7 @@ function Values() {
     
     return (
         <div 
-            className="relative min-h-screen w-full flex items-center justify-center px-4 sm:px-6 lg:px-8"
+            className="relative min-h-screen w-full flex items-center justify-center px-4 sm:px-6 lg:px-8 mt-28"
             style={{
                 backgroundImage: `url(${texturaBackground})`,
                 backgroundSize: 'cover',
