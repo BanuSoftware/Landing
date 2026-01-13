@@ -51,8 +51,8 @@ function Values() {
             icon: iconMaybe,
             title: 'Personalización sin fricción',
             texts: [
-                '--------------------',
-                '---------------------'
+                'Neque porro quisquam est qui dolorem',
+                'psum quia dolor sit amet, consectetur, adipisci velit..."'
             ],
             position: { top: '244px', left: '10px' }
         }
