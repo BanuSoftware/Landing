@@ -1,7 +1,7 @@
 import VisionMision from "../Components/VisionMision/VisionMision.jsx";
 import Carousel from "../Components/Servicios/Servicios.jsx";
 import Proceso from "../Components/Proceso/Proceso.jsx";
-import Valores from "../Components/Valores/components_valores/ContenidoValores.jsx";
+import Valores from "../Components/Valores/Valores.jsx";
 
 function Landing() {
   return (
