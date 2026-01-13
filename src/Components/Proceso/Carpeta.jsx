@@ -108,7 +108,7 @@ const Carpeta = ({ title, step, description, color, textColor, index }) => {
         </svg>
         
         {/* Contenido encima del SVG */}
-        <div className="absolute inset-0 flex flex-col justify-center px-6 pt-2">
+        <div className="absolute inset-0 flex flex-col justify-center px-6 pt-4">
           {/* Título y paso */}
           <div className="flex justify-between items-start mb-6">
             <h3 className="text-3xl font-medium tracking-[-0.07em] text-white leading-none">
@@ -120,7 +120,7 @@ const Carpeta = ({ title, step, description, color, textColor, index }) => {
           </div>
           
           {/* Descripción */}
-          <p className="text-white font-medium text-sm tracking-[-0.07em] leading-tight indent-4 max-w-xs mx-auto">
+          <p className="text-white font-medium text-[12px] tracking-[-0.07em] leading-tight max-w-xs mx-auto">
             {description}
           </p>
           
