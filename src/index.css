@@ -26,3 +26,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+iframe {
+  @apply outline-none border-0;
+}
