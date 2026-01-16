@@ -34,15 +34,36 @@ const Proceso = () => {
   ];
   
   return (
-    <>
-      <p className='font-medium text-6xl max-w-114 m-auto tracking-[-0.07em] text-center mt-28'>Asi llevamos tu idea a la realidad</p>
-      <div className='max-w-lg m-auto'>
-        <div className='w-1/2'></div>
-        <div className='max-w-58 font-medium text-[16px] tracking-[-0.07em] mt-12 m-auto ml-70 indent-5 leading-none mb-24'>Cuatro pasos claros para avanzar contigo de forma cercana y eficiente, cuidando cada detalle a lo largo del camino.</div>
+    <div className="w-full px-4 md:px-8">
+      <p className='font-medium text-3xl md:text-5xl lg:text-6xl max-w-4xl mx-auto tracking-[-0.07em] text-center mt-16 md:mt-24 lg:mt-28'>
+        Así llevamos tu idea a la realidad
+      </p>
+      
+      <div className='max-w-lg mx-auto'>
+        <div className='max-w-xs md:max-w-sm lg:max-w-58 font-medium text-sm md:text-base tracking-[-0.07em] mt-8 md:mt-10 lg:mt-12 mx-auto md:ml-auto lg:ml-70 indent-5 leading-tight mb-12 md:mb-20 lg:mb-24'>
+          Cuatro pasos claros para avanzar contigo de forma cercana y eficiente, cuidando cada detalle a lo largo del camino.
+        </div>
       </div>
       
-      <div className="relative w-full bg-white p-8 h-275">
-      <div className="relative w-full max-w-327 mx-auto">
+      {/* Contenedor Desktop/Tablet */}
+      <div className="hidden md:block relative w-full bg-white p-4 md:p-6 lg:p-8" style={{ height: '1100px' }}>
+        <div className="relative w-full max-w-7xl mx-auto">
+          {carpetas.map((carpeta, index) => (
+            <Carpeta
+              key={index}
+              title={carpeta.title}
+              step={carpeta.step}
+              color={carpeta.color}
+              textColor={carpeta.textColor}
+              description={carpeta.description}
+              index={index}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Contenedor Móvil */}
+      <div className="md:hidden">
         {carpetas.map((carpeta, index) => (
           <Carpeta
             key={index}
@@ -56,8 +77,6 @@ const Proceso = () => {
         ))}
       </div>
     </div>
-    </>
-    
   );
 };
 
