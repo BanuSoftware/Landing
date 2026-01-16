@@ -79,23 +79,25 @@ const Contacto = () => {
       style={{ backgroundColor: interpolateColor(scrollProgress) }}
     >
       <div 
-        className='w-1/2 items-center p-28 flex-col justify-center text-center flex'
+        className='w-1/2 flex justify-center'
         style={{ color: interpolateTextColor(scrollProgress) }}
       >
-        <h2 className='font-medium text-6xl'>Contactanos</h2>
-        <p className='font-medium text-xl mt-4 tracking-[-0.07em] leading-none'>
-          ¿Listo para llevar tu proyecto al siguiente nivel? Escríbenos y uno de nuestros expertos se pondrá en contacto contigo para ofrecerte una solución personalizada. ¡Estamos aquí para ayudarte a crecer con tecnología!
-        </p>
-        <div className='flex gap-2 items-center mt-4'>
-          <FaPhone className='text-xl'/>
-          <p className='font-medium text-xl mt-1'>442 123 1212</p>
-        </div>
-        
-        <div className='flex gap-2 items-center mt-2'>
-          <IoMail className='text-xl' />
-          <a href="mailto:studio@banu.com.mx" className='font-medium text-xl'>
-            studio@banu.com.mx
-          </a>
+        <div className='flex-col w-3/4 justify-center items-center'>
+          <h2 className='font-medium text-8xl'>Contactanos</h2>
+          <p className='font-medium text-2xl mt-8 tracking-[-0.07em] leading-none pl-1 indent-5 text-justify'>
+            ¿Listo para llevar tu proyecto al siguiente nivel? Escríbenos y uno de nuestros expertos se pondrá en contacto contigo para ofrecerte una solución personalizada. ¡Estamos aquí para ayudarte a crecer con tecnología!
+          </p>
+          <div className='flex gap-2 items-center mt-6 pl-1'>
+            <FaPhone className='text-2xl'/>
+            <p className='font-medium text-xl mt-1'>442 123 1212</p>
+          </div>
+          
+          <div className='flex gap-2 items-center mt-2 pl-0.5'>
+            <IoMail className='text-2xl' />
+            <a href="mailto:studio@banu.com.mx" className='font-medium text-xl'>
+              studio@banu.com.mx
+            </a>
+          </div>
         </div>
       </div>
       
