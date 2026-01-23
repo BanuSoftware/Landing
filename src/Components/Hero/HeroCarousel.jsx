@@ -3,7 +3,7 @@ import GoogleLogo from "../../Assets/Images/Google.png";
 import AmazonLogo from "../../Assets/Images/Amazon.png";
 
 export default function HeroCarousel() {
-  // Array de logos base
+  
   const logos = [
     GoogleLogo,
     AmazonLogo,
@@ -18,7 +18,7 @@ export default function HeroCarousel() {
     <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[60px] w-[60%] z-20">
       <div className="overflow-hidden relative">
         <div className="flex carousel-track">
-          {/* Duplicamos exactamente 2 veces el mismo contenido */}
+          
           {logos.map((logo, index) => (
             <img
               key={`first-${index}`}
@@ -37,7 +37,7 @@ export default function HeroCarousel() {
           ))}
         </div>
 
-        {/* Gradient fade izquierdo */}
+        
         <div 
           className="absolute left-0 top-0 h-full w-40 pointer-events-none backdrop-blur-[3px]" 
           style={{
@@ -47,7 +47,7 @@ export default function HeroCarousel() {
           }}
         />
         
-        {/* Gradient fade derecho */}
+       
         <div 
           className="absolute right-0 top-0 h-full w-40 pointer-events-none backdrop-blur-[3px]"
           style={{
