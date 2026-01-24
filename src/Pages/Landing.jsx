@@ -1,7 +1,6 @@
 import VisionMision from "../Components/VisionMision/VisionMision.jsx";
 import Carousel from "../Components/Servicios/Servicios.jsx";
 import Proceso from "../Components/Proceso/Proceso.jsx";
-import Valores from "../Components/Valores/Valores.jsx";
 import Hero from "../Components/Hero/Hero.jsx";
 
 function Landing({ onContactClick }) {
@@ -11,7 +10,6 @@ function Landing({ onContactClick }) {
       <VisionMision />
       <Carousel />
       <Proceso />
-      <Valores />
     </div>
   );
 }
