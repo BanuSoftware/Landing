@@ -1,7 +1,5 @@
 import Logo from "../Assets/Images/Logo.svg";
-
-
-const Navbar = () => {
+const Navbar = ({ onContactClick }) => {
   return (
     <nav className="flex items-center justify-between w-[95%] h-[37px] mx-auto  font-indivisible">
       
@@ -13,7 +11,7 @@ const Navbar = () => {
           className="h-6 w-auto"
         />
       </div>
-
+      
       {/* Links */}
       <ul className="flex items-center gap-4 list-none text-white">
         <li>
@@ -36,16 +34,15 @@ const Navbar = () => {
 
         {/* Botón */}
         <li>
-          <a
-            href="#contact"
-            className="flex items-center justify-center w-[123px] h-[26px] border border-white rounded-lg text-white no-underline"
+          <button
+            onClick={onContactClick}
+            className="flex items-center justify-center w-[123px] h-[26px] border border-white rounded-lg text-white no-underline bg-transparent cursor-pointer hover:bg-white hover:text-black transition-colors"
           >
             Contáctanos
-          </a>
+          </button>
         </li>
       </ul>
     </nav>
   );
 };
-
 export default Navbar;
