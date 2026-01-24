@@ -33,6 +33,8 @@ const Proceso = () => {
     }
   ];
   
+  const containerHeight = (carpetas.length - 1) * 170 + 668 + 30;
+  
   return (
     <div className="w-full px-4 md:px-8">
       <p className='font-medium text-3xl md:text-5xl lg:text-6xl max-w-4xl mx-auto tracking-[-0.07em] text-center mt-16 md:mt-24 lg:mt-28'>
@@ -46,7 +48,10 @@ const Proceso = () => {
       </div>
       
       {/* Contenedor Desktop/Tablet */}
-      <div className="hidden md:block relative w-full bg-white p-4 md:p-6 lg:p-8" style={{ height: '1100px' }}>
+      <div 
+        className="hidden md:block relative w-full bg-white p-4 md:p-6 lg:p-8" 
+        style={{ height: `${containerHeight}px` }}
+      >
         <div className="relative w-full max-w-7xl mx-auto">
           {carpetas.map((carpeta, index) => (
             <Carpeta
@@ -61,7 +66,6 @@ const Proceso = () => {
           ))}
         </div>
       </div>
-
       {/* Contenedor Móvil */}
       <div className="md:hidden">
         {carpetas.map((carpeta, index) => (
