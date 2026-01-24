@@ -1,9 +1,10 @@
 import React from 'react'
 import gorilaContactanos from "../../Assets/Images/gorilaContactanos.svg";
+import Footer from '../../Layout/Footer';
 
 const Contacto = () => {
-  return (
-    <section className='w-full flex justify-center'>
+  return (<>
+    <section className='w-full flex justify-center relative z-10 bg-white'>
         {/* Imagen del gorila - oculta en móvil */}
         <div className='hidden lg:flex w-2/5 items-center justify-end'>
             <div className='h-screen sticky top-0 flex items-end mb-22'>
@@ -77,6 +78,8 @@ const Contacto = () => {
             </form>
         </div>
     </section>
+    <Footer></Footer>
+  </>
   )
 }
 

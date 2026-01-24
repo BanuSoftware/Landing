@@ -31,7 +31,7 @@ function App() {
         {/* Botón de cerrar */}
         <button
           onClick={() => setShowContacto(false)}
-          className="absolute top-8 right-8 text-4xl font-light hover:text-gray-600 transition-colors z-10"
+          className="absolute top-8 right-8 text-4xl font-light hover:text-gray-600 transition-colors z-11 cursor-pointer"
         >
           ✕
         </button>
