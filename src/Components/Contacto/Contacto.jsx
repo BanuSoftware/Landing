@@ -4,70 +4,78 @@ import gorilaContactanos from "../../Assets/Images/gorilaContactanos.svg";
 const Contacto = () => {
   return (
     <section className='w-full flex justify-center'>
-        <div className='flex w-2/5 items-center justify-end'>
+        {/* Imagen del gorila - oculta en móvil */}
+        <div className='hidden lg:flex w-2/5 items-center justify-end'>
             <div className='h-screen sticky top-0 flex items-end mb-22'>
                 <img src={gorilaContactanos} alt="" className='w-auto' />
             </div>
         </div>
-        <div className='w-3/5 flex flex-col items-center mb-22 pt-70'>
-            <form action="" className='p-10 flex flex-col min-w-189.25'>
-                <div className='flex flex-col gap-14'>
-
-                    <h2 className='font-medium text-[88px] tracking-[-0.03em] leading-[0.94] text-center'>Hola, Mucho gusto!</h2>
-                    <div className='flex gap-12'>
-
-                        <div className='flex flex-col w-1/2 gap-3'>
-                            <label className='font-medium text-2xl tracking-[-0.07em] leading-[0.94] '>
+        
+        {/* Formulario - 100% width en móvil, 3/5 en desktop */}
+        <div className='w-full lg:w-3/5 flex flex-col items-center mb-10 lg:mb-22 pt-10 lg:pt-70 px-4 lg:px-0'>
+            <form action="" className='p-4 lg:p-10 flex flex-col w-full lg:min-w-189.25 max-w-4xl'>
+                <div className='flex flex-col gap-8 lg:gap-14'>
+                    {/* Título responsive */}
+                    <h2 className='font-medium text-4xl md:text-6xl lg:text-[88px] tracking-[-0.03em] leading-[0.94] text-center'>
+                        Hola, Mucho gusto!
+                    </h2>
+                    
+                    {/* Nombre y Apellido - stack en móvil, lado a lado en desktop */}
+                    <div className='flex flex-col md:flex-row gap-6 lg:gap-12'>
+                        <div className='flex flex-col w-full md:w-1/2 gap-3'>
+                            <label className='font-medium text-lg lg:text-2xl tracking-[-0.07em] leading-[0.94]'>
                                 Nombre
                             </label>
-                            <input type="text" className='border-b'/>
+                            <input type="text" className='border-b py-2 outline-none'/>
                         </div>
-
-                        <div className='flex flex-col w-1/2 gap-3'>
-                            <label className='font-medium text-2xl tracking-[-0.07em] leading-[0.94]'>
+                        <div className='flex flex-col w-full md:w-1/2 gap-3'>
+                            <label className='font-medium text-lg lg:text-2xl tracking-[-0.07em] leading-[0.94]'>
                                 Apellido
                             </label>
-                            <input type="text" className='border-b'/>
+                            <input type="text" className='border-b py-2 outline-none'/>
                         </div>
-
                     </div>
-
+                    
                     <div className='flex flex-col w-full gap-3'>
-                        <label className='font-medium text-2xl tracking-[-0.07em] leading-[0.94] '>
-                            Correo Electronico
+                        <label className='font-medium text-lg lg:text-2xl tracking-[-0.07em] leading-[0.94]'>
+                            Correo Electrónico
                         </label>
-                        <input type="text" className='border-b'/>
+                        <input type="email" className='border-b py-2 outline-none'/>
                     </div>
-
+                    
                     <div className='flex flex-col w-full gap-3'>
-                        <label className='font-medium text-2xl tracking-[-0.07em] leading-[0.94] '>
+                        <label className='font-medium text-lg lg:text-2xl tracking-[-0.07em] leading-[0.94]'>
                             Nombre de tu negocio
                         </label>
-                        <input type="text" className='border-b'/>
+                        <input type="text" className='border-b py-2 outline-none'/>
                     </div>
-
                 </div>
-
-                <div className='flex flex-col gap-20 mt-34'>
-                    <div className='w-183.5'>
-                        <h2 className='font-medium text-[88px] tracking-[-0.03em] leading-[0.94] text-center'>Cuentanos sobre tu proyecto</h2>
+                
+                <div className='flex flex-col gap-10 lg:gap-20 mt-16 lg:mt-34'>
+                    {/* Segundo título responsive */}
+                    <div className='w-full lg:w-183.5'>
+                        <h2 className='font-medium text-4xl md:text-6xl lg:text-[88px] tracking-[-0.03em] leading-[0.94] text-center'>
+                            Cuéntanos sobre tu proyecto
+                        </h2>
                     </div>
-
+                    
                     <div className='flex flex-col w-full gap-3'>
-                        <label className='font-medium text-2xl tracking-[-0.07em] leading-[0.94] '>
+                        <label className='font-medium text-lg lg:text-2xl tracking-[-0.07em] leading-[0.94]'>
                             Tu Mensaje (Proyecto, Tiempos, Presupuesto, etc.)*
                         </label>
-                        <input type="text" className='border-b'/>
+                        <textarea 
+                            className='border-b py-2 outline-none min-h-25 resize-none'
+                            rows="4"
+                        />
                     </div>
-
-                    <button className='font-medium text-4xl tracking-[-0.07em] leading-[0.94] underline self-start'>
+                    
+                    {/* Botón responsive */}
+                    <button className='font-medium text-2xl lg:text-4xl tracking-[-0.07em] leading-[0.94] underline self-start hover:opacity-70 transition-opacity'>
                         Enviar Mensaje →
                     </button>
                 </div>
-
             </form>
         </div>
-        
     </section>
   )
 }
