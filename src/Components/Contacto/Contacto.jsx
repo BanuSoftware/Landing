@@ -4,11 +4,30 @@ import Footer from '../../Layout/Footer';
 
 const Contacto = () => {
   return (<>
+    <style>{`
+      @keyframes flotar {
+        0%, 100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+      
+      .gorila-flotante {
+        animation: flotar 3s ease-in-out infinite;
+      }
+    `}</style>
+    
     <section className='w-full flex justify-center relative z-10 bg-white'>
         {/* Imagen del gorila - oculta en móvil */}
         <div className='hidden lg:flex w-2/5 items-center justify-end'>
             <div className='h-screen sticky top-0 flex items-end mb-22'>
-                <img src={gorilaContactanos} alt="" className='w-auto' />
+                <img 
+                  src={gorilaContactanos} 
+                  alt="" 
+                  className='w-auto gorila-flotante' 
+                />
             </div>
         </div>
         
