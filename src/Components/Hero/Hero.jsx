@@ -6,7 +6,7 @@ import Rock2 from '../../Assets/Images/RocaIzq.svg'
 import HeroCarousel from './HeroCarousel.jsx';
 import './Hero.css';
 
-function Hero() {
+function Hero({ onContactClick }) {
   return (
     <section className="relative min-h-screen overflow-hidden">
 
@@ -35,7 +35,7 @@ function Hero() {
 
       {/* Contenido */}
       <div className="relative z-20 pt-2">
-        <Navbar />
+        <Navbar onContactClick={onContactClick}/>
       </div>
 
       <div className='MainSection'>
