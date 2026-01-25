@@ -157,7 +157,7 @@ function Carousel() {
   };
 
   return (
-    <div className="w-full min-h-screen bg-white flex flex-col items-center justify-center py-16">
+    <div id="Servicios" className="w-full min-h-screen bg-white flex flex-col items-center justify-center py-16">
 
         {/* Encabezado de la sección*/}
       <div >

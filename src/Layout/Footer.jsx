@@ -22,28 +22,28 @@ const Footer = ({onContactClick}) => {
             {/* Sección de navegación */}
             <div className='flex flex-wrap gap-8 lg:gap-12 mt-8 lg:mt-12'>
                 {/* Navegación */}
-                <div className='border-l border-white pl-4 pt-1.5'>
-                    <p className='font-semibold mb-2 lg:mb-0'>Navegación</p>
-                    <p className='mt-2 lg:mt-4 hover:underline cursor-pointer'>Home</p>
-                    <p className='hover:underline cursor-pointer'>Servicios</p>
-                    <p className='hover:underline cursor-pointer'>Proyectos</p>
-                    <p className='hover:underline cursor-pointer'>Nosotros</p>
-                    <p className='hover:underline cursor-pointer'>Contáctanos</p>
-                </div>
+                <ul className='border-l border-white pl-4 pt-1.5'>
+                    <li className='font-semibold mb-2 lg:mb-0'>Navegación</li>
+                    <li className='mt-2 lg:mt-4 hover:underline cursor-pointer'><a href="#Home">Home</a></li>
+                    <li className='hover:underline cursor-pointer'><a href="#Proyectos">Proyectos</a></li>
+                    <li className='hover:underline cursor-pointer'><a href="#Servicios">Servicios</a></li>
+                    <li className='hover:underline cursor-pointer'><a href="#Procesos">Proceso</a></li>
+                    <li  className='hover:underline cursor-pointer'><a onClick={onContactClick} >Contáctanos</a></li>
+                </ul>
                 
                 {/* Social */}
-                <div className='border-l border-white pl-4 pt-1.5'>   
-                    <p className='font-semibold mb-2 lg:mb-0'>Social</p>
-                    <p className='mt-2 lg:mt-4 hover:underline cursor-pointer'>LinkedIn</p>
-                    <p className='hover:underline cursor-pointer'>Instagram</p>
-                    <p className='hover:underline cursor-pointer'>X</p>
-                </div>
+                <ul className='border-l border-white pl-4 pt-1.5'>   
+                    <li className='font-semibold mb-2 lg:mb-0'>Social</li>
+                    <li className='mt-2 lg:mt-4 hover:underline cursor-pointer'>LinkedIn</li>
+                    <li className='hover:underline cursor-pointer'>Instagram</li>
+                    <li className='hover:underline cursor-pointer'>X</li>
+                </ul>
                 
                 {/* FAQs */}
-                <div className='border-l border-white pl-4 pt-1.5 lg:pl-6 lg:border-l-0'>   
+                <ul className='border-l border-white pl-4 pt-1.5 lg:pl-6 lg:border-l-0'>   
                     <p className='font-semibold mb-2 lg:mb-0'>FAQs</p>
                     <p className='mt-2 lg:mt-0 hover:underline cursor-pointer'>Ayuda</p>
-                </div>
+                </ul>
             </div>
         </div>
         
