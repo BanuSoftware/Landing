@@ -32,32 +32,26 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ===================== */
-/* FIREFOX */
-/* ===================== */
-* {
-  scrollbar-color: #E4204E transparent;
-}
-
-/* ===================== */
-/* WEBKIT */
-/* ===================== */
+/* Para navegadores basados en WebKit (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
-  width: 10px;
-  background: transparent;
+  width: 8px; /* Ancho de la scrollbar vertical */
+  height: 8px; /* Alto de la scrollbar horizontal */
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: transparent; /* Fondo transparente */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #F78295;
-  border-radius: 10px;
-  border: 3px solid transparent;
-  background-clip: padding-box;
+  background: rgba(0, 0, 0, 0.2); /* Color semi-transparente */
+  border-radius: 4px; /* Bordes redondeados */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #E4204E;
+  background: #E4204E; /* Más visible al pasar el mouse */
+}
+
+/* Para Firefox */
+* {
+  scrollbar-color: #E4204E transparent; /* thumb y track */
 }
