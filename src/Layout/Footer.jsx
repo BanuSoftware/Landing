@@ -1,12 +1,22 @@
 import React from 'react'
 import logofooter from '../assets/Images/logofooter.svg'
 
-const Footer = ({onContactClick}) => {
+const Footer = ({onContactClick, onNavigate}) => {
+  const handleNavClick = (e, href) => {
+    if (onNavigate) {
+      onNavigate();
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 600);
+    }
+  };
+
   return (
     <footer className="sticky bottom-0 min-h-screen bg-[#CE5368] flex flex-col text-white justify-between py-8 lg:py-0">
-        {/* Contenido superior */}
         <div className='w-full flex flex-col lg:flex-row px-4 lg:px-0'>
-            {/* Sección de CTA */}
             <div className='w-full lg:w-112.5 h-max lg:ml-10 mt-8 lg:mt-22 lg:mr-64 mb-8 lg:mb-0'>
                 <p className='text-white font-medium text-3xl md:text-4xl lg:text-6xl tracking-[-0.07em] leading-none'>
                     Hagamos tu proyecto realidad
@@ -19,19 +29,26 @@ const Footer = ({onContactClick}) => {
                 </button>
             </div>
             
-            {/* Sección de navegación */}
             <div className='flex flex-wrap gap-8 lg:gap-12 mt-8 lg:mt-12'>
-                {/* Navegación */}
                 <ul className='border-l border-white pl-4 pt-1.5'>
                     <li className='font-semibold mb-2 lg:mb-0'>Navegación</li>
-                    <li className='mt-2 lg:mt-4 hover:underline cursor-pointer'><a href="#Home">Home</a></li>
-                    <li className='hover:underline cursor-pointer'><a href="#Proyectos">Proyectos</a></li>
-                    <li className='hover:underline cursor-pointer'><a href="#Servicios">Servicios</a></li>
-                    <li className='hover:underline cursor-pointer'><a href="#Procesos">Proceso</a></li>
-                    <li  className='hover:underline cursor-pointer'><a onClick={onContactClick} >Contáctanos</a></li>
+                    <li className='mt-2 lg:mt-4 hover:underline cursor-pointer'>
+                        <a onClick={(e) => handleNavClick(e, '#Home')}>Home</a>
+                    </li>
+                    <li className='hover:underline cursor-pointer'>
+                        <a onClick={(e) => handleNavClick(e, '#Proyectos')}>Proyectos</a>
+                    </li>
+                    <li className='hover:underline cursor-pointer'>
+                        <a onClick={(e) => handleNavClick(e, '#Servicios')}>Servicios</a>
+                    </li>
+                    <li className='hover:underline cursor-pointer'>
+                        <a onClick={(e) => handleNavClick(e, '#Procesos')}>Proceso</a>
+                    </li>
+                    <li className='hover:underline cursor-pointer'>
+                        <a onClick={onContactClick}>Contáctanos</a>
+                    </li>
                 </ul>
                 
-                {/* Social */}
                 <ul className='border-l border-white pl-4 pt-1.5'>   
                     <li className='font-semibold mb-2 lg:mb-0'>Social</li>
                     <li className='mt-2 lg:mt-4 hover:underline cursor-pointer'>LinkedIn</li>
@@ -39,7 +56,6 @@ const Footer = ({onContactClick}) => {
                     <li className='hover:underline cursor-pointer'>X</li>
                 </ul>
                 
-                {/* FAQs */}
                 <ul className='border-l border-white pl-4 pt-1.5 lg:pl-6 lg:border-l-0'>   
                     <p className='font-semibold mb-2 lg:mb-0'>FAQs</p>
                     <p className='mt-2 lg:mt-0 hover:underline cursor-pointer'>Ayuda</p>
@@ -47,16 +63,13 @@ const Footer = ({onContactClick}) => {
             </div>
         </div>
         
-        {/* Logo grande inferior */}
         <div className='flex justify-center items-center mt-auto overflow-hidden py-8 lg:py-0'>
-            {/* Logo SVG para móvil */}
             <img 
                 src={logofooter} 
                 alt="Banu Logo" 
                 className='block lg:hidden w-48 md:w-64 h-auto'
             />
             
-            {/* Logo SVG + Texto para desktop */}
             <div className='hidden lg:flex items-baseline'>
                 <img 
                     src={logofooter} 

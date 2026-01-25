@@ -4,7 +4,7 @@ import Footer from '../../Layout/Footer';
 import emailjs from '@emailjs/browser'
 import { useRef } from 'react';
 
-const Contacto = () => {
+const Contacto = ({ onClose }) => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -122,7 +122,7 @@ const Contacto = () => {
             </form>
         </div>
     </section>
-    <Footer></Footer>
+    <Footer onContactClick={onClose} onNavigate={onClose}></Footer>
   </>
   )
 }
