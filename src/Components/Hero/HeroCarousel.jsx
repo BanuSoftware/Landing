@@ -1,17 +1,19 @@
 import React from "react";
-import GoogleLogo from "../../Assets/Images/Google.png";
-import AmazonLogo from "../../Assets/Images/Amazon.png";
-
+import nucleaLogo from "../../Assets/Images/nucleaLogo.svg";
+import picaseLogo from "../../Assets/Images/picaseLogo.avif"
+import habitreeLogo from "../../Assets/Images/habitreeLogo.svg"
 export default function HeroCarousel() {
   
   const logos = [
-    GoogleLogo,
-    AmazonLogo,
-    GoogleLogo,
-    AmazonLogo,
-    GoogleLogo,
-    AmazonLogo,
-    
+    nucleaLogo,
+    picaseLogo,
+    habitreeLogo,
+    nucleaLogo,
+    picaseLogo,
+    habitreeLogo,
+    nucleaLogo,
+    picaseLogo,
+    habitreeLogo,
   ];
 
   return (
