@@ -4,6 +4,7 @@ import Image from '../../Assets/Images/BanuMonkey.svg'
 import Rock1 from '../../Assets/Images/RocaDer.svg'
 import Rock2 from '../../Assets/Images/RocaIzq.svg'
 import HeroCarousel from './HeroCarousel.jsx';
+import ScrollDownIndicator from './ScrollDownIndicator.jsx';
 import './Hero.css';
 
 function Hero({ onContactClick }) {
@@ -120,6 +121,7 @@ function Hero({ onContactClick }) {
       />
       
       <HeroCarousel />
+      <ScrollDownIndicator />
     </section>
   );
 }
