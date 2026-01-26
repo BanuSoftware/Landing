@@ -36,7 +36,7 @@ const Proceso = ({ onContactClick }) => {
   const containerHeight = (carpetas.length - 1) * 170 + 600;
   
   return (
-    <div className="w-full px-4 md:px-8">
+    <div id="Procesos" className="w-full px-4 md:px-8">
       <p className='font-medium text-3xl md:text-5xl lg:text-6xl max-w-4xl mx-auto tracking-[-0.07em] text-center mt-16 md:mt-24 lg:mt-28'>
         Así llevamos tu idea a la realidad
       </p>

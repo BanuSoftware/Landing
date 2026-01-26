@@ -34,7 +34,7 @@ function Hero({ onContactClick }) {
       />
 
       {/* Contenido */}
-      <div className="relative z-20 pt-2">
+      <div id='Home' className="relative z-20 pt-2">
         <Navbar onContactClick={onContactClick}/>
       </div>
 
