@@ -3,6 +3,9 @@ import logofooter from '../assets/Images/logofooter.svg'
 
 const Footer = ({onContactClick, onNavigate}) => {
   const handleNavClick = (e, href) => {
+    e.preventDefault();
+    
+    // si pasamos el onNavigate estamos en contacto
     if (onNavigate) {
       onNavigate();
       setTimeout(() => {
@@ -11,6 +14,12 @@ const Footer = ({onContactClick, onNavigate}) => {
           element.scrollIntoView({ behavior: 'smooth' });
         }
       }, 600);
+    } else {
+      // si no esta onNavigate = estamos en la página principal
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -33,16 +42,16 @@ const Footer = ({onContactClick, onNavigate}) => {
                 <ul className='border-l border-white pl-4 pt-1.5'>
                     <li className='font-semibold mb-2 lg:mb-0'>Navegación</li>
                     <li className='mt-2 lg:mt-4 hover:underline cursor-pointer'>
-                        <a onClick={(e) => handleNavClick(e, '#Home')}>Home</a>
+                        <a href="#Home" onClick={(e) => handleNavClick(e, '#Home')}>Home</a>
                     </li>
                     <li className='hover:underline cursor-pointer'>
-                        <a onClick={(e) => handleNavClick(e, '#Proyectos')}>Proyectos</a>
+                        <a href="#Proyectos" onClick={(e) => handleNavClick(e, '#Proyectos')}>Proyectos</a>
                     </li>
                     <li className='hover:underline cursor-pointer'>
-                        <a onClick={(e) => handleNavClick(e, '#Servicios')}>Servicios</a>
+                        <a href="#Servicios" onClick={(e) => handleNavClick(e, '#Servicios')}>Servicios</a>
                     </li>
                     <li className='hover:underline cursor-pointer'>
-                        <a onClick={(e) => handleNavClick(e, '#Procesos')}>Proceso</a>
+                        <a href="#Procesos" onClick={(e) => handleNavClick(e, '#Procesos')}>Proceso</a>
                     </li>
                     <li className='hover:underline cursor-pointer'>
                         <a onClick={onContactClick}>Contáctanos</a>
@@ -64,19 +73,26 @@ const Footer = ({onContactClick, onNavigate}) => {
         </div>
         
         <div className='flex justify-center items-center mt-auto overflow-hidden py-8 lg:py-0'>
+            {/* Solo logo en mobile y tablet - escala con viewport */}
             <img 
                 src={logofooter} 
                 alt="Banu Logo" 
-                className='block lg:hidden w-48 md:w-64 h-auto'
+                className='block lg:hidden h-auto'
+                style={{ width: 'min(80vw, 320px)' }}
             />
             
-            <div className='hidden lg:flex items-baseline'>
+            {/* Logo + texto BANU en desktop - escala con viewport */}
+            <div className='hidden lg:flex items-baseline gap-2'>
                 <img 
                     src={logofooter} 
                     alt="Banu Logo" 
-                    className='w-auto h-auto'
+                    className='h-auto'
+                    style={{ width: 'min(25vw, 400px)' }}
                 />
-                <p className='text-[#BD3148] font-bold text-[350px] tracking-[-0.07em] leading-none'>
+                <p 
+                    className='text-[#BD3148] font-bold tracking-[-0.07em] leading-none whitespace-nowrap'
+                    style={{ fontSize: 'min(20vw, 350px)' }}
+                >
                     BANU
                 </p>
             </div>

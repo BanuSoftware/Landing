@@ -14,8 +14,8 @@ function Card({ title, description, icon, banner, position }) {
   return (
     <div
       className="
-        w-[348px]
-        h-[450px]
+        w-94.25
+        h-132
         flex
         flex-col
         items-center
@@ -23,7 +23,6 @@ function Card({ title, description, icon, banner, position }) {
         px-8
         py-4
         rounded-2xl
-        shadow-2xl
       "
       style={{ 
         backgroundColor: getColor(position),
@@ -34,7 +33,7 @@ function Card({ title, description, icon, banner, position }) {
       <img
         src={icon}
         alt="Icon"
-        className="w-[58px] h-[58px]"
+        className="w-14.5 h-14.5"
         onError={(e) => {
           console.error('Error loading icon:', icon);
           e.target.style.display = 'none';
