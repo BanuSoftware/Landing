@@ -61,34 +61,62 @@ function Hero({ onContactClick }) {
         "
       />
       
-      {/* ROCAS - Con escalado fluido corregido */}
+      {/* ROCA IZQUIERDA - Móvil */}
       <img 
         src={Rock2}
+        className="
+          absolute 
+          z-10
+          w-20
+          bottom-[18%]
+          left-[5%]
+          md:hidden
+        "
+      />
+      
+      {/* ROCA IZQUIERDA - Desktop */}
+      <img 
+        src={Rock2}
+        className="
+          absolute 
+          z-10
+          hidden
+          md:block
+        "
         style={{ 
-          width: 'clamp(128px, 12vw, 196px)',
+          width: 'clamp(80px, 12vw, 196px)',
           bottom: 'clamp(40px, 4vw, 60px)',
           left: 'clamp(24px, 3vw, 48px)'
         }}
-        className="
-          absolute 
-          z-30 
-          hidden 
-          md:block
-        " 
       />
+      
+      {/* ROCA DERECHA - Móvil */}
       <img 
         src={Rock1}
+        className="
+          absolute 
+          z-10
+          w-16
+          bottom-[15%]
+          right-[5%]
+          md:hidden
+        "
+      />
+      
+      {/* ROCA DERECHA - Desktop */}
+      <img 
+        src={Rock1}
+        className="
+          absolute 
+          z-10
+          hidden
+          md:block
+        "
         style={{ 
           width: 'clamp(96px, 9vw, 128px)',
           bottom: 'clamp(80px, 8vw, 140px)',
           right: 'clamp(36px, 4.5vw, 74px)'
         }}
-        className="
-          absolute 
-          z-30 
-          hidden 
-          md:block
-        " 
       />
       
       <HeroCarousel />

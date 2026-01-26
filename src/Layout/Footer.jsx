@@ -78,7 +78,7 @@ const Footer = ({onContactClick, onNavigate}) => {
                 src={logofooter} 
                 alt="Banu Logo" 
                 className='block lg:hidden h-auto'
-                style={{ width: 'min(80vw, 320px)' }}
+                style={{ width: 'min(80vw, 332px)' }}
             />
             
             {/* Logo + texto BANU en desktop - escala con viewport */}
