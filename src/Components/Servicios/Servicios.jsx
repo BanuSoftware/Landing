@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Card from "./Components_Services/Card.jsx";
 
@@ -6,6 +6,7 @@ function Carousel() {
   const [rotation, setRotation] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(0);
+  const [toggleScale, setToggleScale] = useState(1);
 
   // Datos de las tarjetas
   const cards = [
@@ -50,6 +51,26 @@ function Carousel() {
       category: "Analytics"
     }
   ];
+
+  // Ajustar el toggle
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width < 640) {
+        setToggleScale(0.7); // móviles pequeños
+      } else if (width < 768) {
+        setToggleScale(0.8); // móviles grandes
+      } else if (width < 1024) {
+        setToggleScale(0.9); // tablets
+      } else {
+        setToggleScale(1); // desktop
+      }
+    };
+
+    handleResize(); // Ejecutar al montar
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const anglePerCard = 360 / cards.length; // Calcular ángulo por tarjeta 72 grados 
 
@@ -121,7 +142,7 @@ function Carousel() {
 
     const positions = {
       left: {
-        x: -400,
+        x: -450,
         y: 60,
         rotate: -15,
         scale: 0.85,
@@ -137,7 +158,7 @@ function Carousel() {
         opacity: 1
       },
       right: {
-        x: 400,
+        x: 450,
         y: 60,
         rotate: 15,
         scale: 0.85,
@@ -161,20 +182,22 @@ function Carousel() {
 
         {/* Encabezado de la sección*/}
       <div >
-        <h2 className="text-lg font-normal mb-6">Define el objetivo y nosotros lo construimos contigo</h2>
+        <h2 className="text-lg font-normal mb-6 text-center">Define el objetivo y nosotros lo construimos contigo</h2>
       </div>
       
       {/* Toggle de Categorías */}
       <div 
-        className="flex gap-2 p-2 rounded-full mb--4"
-        style={{ backgroundColor: 'rgb(249, 249, 249)' }}
+        className="flex gap-2 p-2 rounded-full bg-[#F9F9F9] origin-center transition-transform duration-300"
+        style={{
+          transform: `scale(${toggleScale})`
+        }}
       >
         {cards.map((card, idx) => (
           <button
             key={card.id}
             onClick={() => handleCategoryClick(idx)}
             disabled={isAnimating}
-            className="px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 disabled:cursor-not-allowed"
+            className="px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 disabled:cursor-not-allowed"
             style={{
               backgroundColor: idx === selectedCategory ? 'rgb(0, 0, 0)' : 'transparent',
               color: idx === selectedCategory ? 'white' : 'rgb(147, 147, 147)'
@@ -186,7 +209,7 @@ function Carousel() {
       </div>
 
       {/* Carrusel */}
-      <div className="relative w-full h-[600px] flex items-center justify-center overflow-hidden">
+      <div className="relative w-full h-[650px] flex items-center justify-center overflow-hidden">
         
         {/* Contenedor de tarjetas */}
         <div className="relative w-full h-full flex items-center justify-center">
