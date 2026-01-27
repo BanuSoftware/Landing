@@ -27,3 +27,31 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Para navegadores basados en WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px; /* Ancho de la scrollbar vertical */
+  height: 8px; /* Alto de la scrollbar horizontal */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Fondo transparente */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2); /* Color semi-transparente */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E4204E; /* Más visible al pasar el mouse */
+}
+
+/* Para Firefox */
+* {
+  scrollbar-color: #E4204E transparent; /* thumb y track */
+}
