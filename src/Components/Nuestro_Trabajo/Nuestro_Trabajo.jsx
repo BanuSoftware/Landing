@@ -1,5 +1,7 @@
 import Trabajo from "./Trabajo";
 import FlowerBanner from "../../Assets/Images/FlowerBanner.png";
+import Habitree from "../../Assets/Images/HabitreePink.png";
+import Flowit from "../../Assets/Images/Flowit.png";
 
 function Nuestro_Trabajo() {
   const trabajos = [
@@ -13,29 +15,21 @@ function Nuestro_Trabajo() {
     },
     {
       id: 2,
-      title: "Rediseño Web", 
-      subtitle: "La Molienda",
-      description: "Renovando la presencia digital para una mejor experiencia de usuario.",
-      image: FlowerBanner,
+      title: "App Development", 
+      subtitle: "Habitree",
+      description: "Convirtiendo tus ideas en aplicaciones de alto impacto",
+      image: Habitree,
       textRight: true,
     },
     {
       id: 3,
-      title: "Campaña Digital", 
-      subtitle: "Cerveza Antu",
-      description: "Estrategias creativas para aumentar la visibilidad y el engagement.",
-      image: FlowerBanner,
+      title: "Software a  medida", 
+      subtitle: "Flowit",
+      description: "Software personalizado que impulsa tu negocio",
+      image: Flowit,
       reverse: true,
     }
     ,
-    {
-      id: 4,
-      title: "Fotografía de Producto", 
-      subtitle: "Santiago Coffee",
-      description: "Capturando la esencia del producto para destacar en el mercado.",
-      image: FlowerBanner,
-      textRight: true,
-    }
 
   ];
   return(
