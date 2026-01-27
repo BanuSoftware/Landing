@@ -1,4 +1,4 @@
-import Logo from "../Assets/Images/Logo.svg";
+import Logo from "../Assets/Images/LogoVectorizado.svg";
 const Navbar = ({ onContactClick }) => {
   return (
     <nav className="flex items-center justify-between w-[95%] h-9.25 mx-auto  font-indivisible">
