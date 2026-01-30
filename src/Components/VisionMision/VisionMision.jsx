@@ -296,7 +296,7 @@ export default function VisionMision() {
 
 
       {/* Espaciador fuera del sticky para separar visualmente */}
-      <div style={{ height: '120vh', width: '100%' }} />
+      <div className="mt-80" style={{ height: '120vh', width: '100%' }} />
 
       {/* Nuestro Trabajo section */}
       <div 
