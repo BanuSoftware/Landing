@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import monoArriba from "./assets/MonoArriba.png";
 import monoAbajo from "./assets/MonoAbajo.png";
+import Nuestro_Trabajo from "../Nuestro_Trabajo/Nuestro_Trabajo";
 
 export default function VisionMision() {
   // Design reference: at 1440px viewport, text is 944px wide, text is 48px
@@ -39,7 +40,7 @@ export default function VisionMision() {
       endRot: -180,
     },
 
-    sectionScrollLengthVh: 300,
+    sectionScrollLengthVh: 180,
     fallStart: 0.36,
 
     groupParallaxPx: 240,
@@ -169,18 +170,28 @@ export default function VisionMision() {
   const monkeyFallExtra = fallEase * SETTINGS.fallDistancePx * scaleFactor;
   const currentRot = lerp(SETTINGS.monoAbajo.rot, SETTINGS.monoAbajo.endRot, fallEase);
 
+    // Transición de color: rosa a blanco al final
+  const colorTransitionStart = 0.30; // Comienza la transición al 30% del scroll
+  const colorTransitionEnd = 0.45; // Termina al 45% del scroll
+  const colorProgress = clamp01((progress - colorTransitionStart) / (colorTransitionEnd - colorTransitionStart));
+  const bgColor = colorProgress >= 1 ? '#FFFFFF' : colorProgress > 0 
+    ? `rgb(${Math.round(lerp(217, 255, colorProgress))}, ${Math.round(lerp(136, 255, colorProgress))}, ${Math.round(lerp(143, 255, colorProgress))})`
+    : SETTINGS.bg;
+
   return (
     <section
       ref={sectionRef}
       id="mision-vision"
       className="relative w-full"
       style={{
-        backgroundColor: SETTINGS.bg,
+        backgroundColor: bgColor,
         fontFamily: "Indivisible",
         minHeight: `${SETTINGS.sectionScrollLengthVh}vh`,
       }}
     >
-      <div className="sticky top-0 h-screen w-full overflow-hidden">
+      <div 
+        className="sticky top-0 h-screen w-full overflow-hidden"
+      >
         <div
           className="relative h-full w-full"
           style={{
@@ -281,6 +292,20 @@ export default function VisionMision() {
             </div>
           </div>
         </div>
+      </div>
+
+
+      {/* Espaciador fuera del sticky para separar visualmente */}
+      <div className="mt-80" style={{ height: '120vh', width: '100%' }} />
+
+      {/* Nuestro Trabajo section */}
+      <div 
+        className="relative" 
+        style={{ 
+          zIndex: 20,
+        }}
+      >
+        <Nuestro_Trabajo />
       </div>
     </section>
   );

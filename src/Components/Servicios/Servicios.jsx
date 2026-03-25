@@ -23,7 +23,7 @@ function Carousel() {
       title: "Desarrollo Web",
       description: "Construimos experiencias web completas, desde páginas que venden hasta productos web interactivos.",
       icon: new URL("../../Assets/Images/Banana.png", import.meta.url).href,
-      banner: new URL("../../Assets/Images/FlowerBanner.png", import.meta.url).href,
+      banner: new URL("../../Assets/Images/Flowit.png", import.meta.url).href,
       category: "Desarrollo"
     },
     {
