@@ -1,5 +1,5 @@
 // ContenidoValores.jsx
-import defaultIcon from "../../../Assets/Images/maybe 3.svg";
+import defaultIcon from "../../../Assets/Images/maybe3.svg";
 
 function Valores({title, content_left, content_right, icon}) {
   return (

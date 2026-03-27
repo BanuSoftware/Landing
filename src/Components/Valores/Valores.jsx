@@ -1,6 +1,6 @@
 // Values.jsx
 import Valores from "./components_valores/ContenidoValores";
-import iconMaybe from "../../Assets/Images/maybe 3.svg";
+import iconMaybe from "../../Assets/Images/maybe3.svg";
 import monoMusica from "../../Assets/Images/MonoMusica.svg";
 import texturaBackground from "../../Assets/Images/Textura.png";
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import logofooter from '../assets/Images/logofooter.svg'
+import logofooter from '../Assets/Images/logofooter.svg'
 
 const Footer = ({onContactClick, onNavigate}) => {
   const handleNavClick = (e, href) => {

@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Landing from "./Pages/Landing.jsx";
 import Contacto from "./Components/Contacto/Contacto.jsx";
-import BackgroundMusic from './BackgroundMusic.jsx';
 
 function App() {
   const [showContacto, setShowContacto] = useState(false);
