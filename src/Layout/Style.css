@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Indivisible";
+  src: url("./assets/fonts/fonnts.com-Indivisible_Variable.otf") format("opentype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+body{
+    background-color: rgb(206, 83, 104);
+}
+
+.Navbar{
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 37px;
+    margin: 41px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+.ul-navbar{
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    text-decoration: none;
+    
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Indivisible', 'Times New Roman', Times, serif;
+}
+
+.btn-navbar{
+    width: 123px;
+    height: 26px;
+
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    padding: 0;
+}

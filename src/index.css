@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --bg: 255, 255, 255;
+  --bg-toggle: 249, 249, 249;
+  --text-toggle: 147, 147, 147;
+  --bg-selected: 0, 0, 0;
+  --text-selected: 255, 255, 255;
+  --bg-primary-card: 206, 83, 104;
+  --text-card: 255, 255, 255;
+  --bg-secondary-card: 143, 52, 67;
+  --bg-thirdary-card: 247, 130, 149;
+  --bg-hero-secondary: 217, 136, 143;
+}
+
+
+@font-face {
+  font-family: "Indivisible";
+  src: url("./assets/fonts/fonnts.com-Indivisible_Variable.otf") format("opentype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  font-family: "Indivisible", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Para navegadores basados en WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px; /* Ancho de la scrollbar vertical */
+  height: 8px; /* Alto de la scrollbar horizontal */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Fondo transparente */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2); /* Color semi-transparente */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E4204E; /* Más visible al pasar el mouse */
+}
+
+/* Para Firefox */
+* {
+  scrollbar-color: #E4204E transparent; /* thumb y track */
+}

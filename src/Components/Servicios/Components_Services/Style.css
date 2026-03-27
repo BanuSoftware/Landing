@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  --bg: rgb(255, 255, 255);
+  --bg-toggle: rgb(249, 249, 249);
+  --text-toggle: rgb(147, 147, 147);
+  --bg-selected: rgb(0, 0, 0);
+  --text-selected: rgb(255, 255, 255);
+  --bg-primary-card: rgb(206, 83, 104);
+  --text-card: rgb(255, 255, 255);
+  --bg-secondary-card: rgb(143, 52, 67);
+  --bg-thirdary-card: rgb(247, 130, 149);
+}
+
+
+@font-face {
+  font-family: "Indivisible";
+  src: url("./assets/fonts/fonnts.com-Indivisible_Variable.otf") format("opentype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+*{
+    font-family: "Indivisible", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+.Card-Container{
+    width: 348px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-primary-card);
+    padding: 16px 32px;
+    border-radius: 16px;
+}
+
+.Banner-Container{
+    width: 110%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+}
+
+.Banner-Card{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+}
+
+.Icon-Card{
+    width: 58px;
+    height: 58px;
+}
+
+.Title-Content{
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--text-card);
+    text-align: center;
+}
+
+.Content-text{
+    font-size: 14px;
+    font-weight: 200;
+    color: var(--text-card);
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 36px;
+}

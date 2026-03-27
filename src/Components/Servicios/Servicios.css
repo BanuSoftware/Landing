@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  --bg: 255, 255, 255;
+  --bg-toggle: 249, 249, 249;
+  --text-toggle: 147, 147, 147;
+  --bg-selected: 0, 0, 0;
+  --text-selected: 255, 255, 255;
+  --bg-primary-card: 206, 83, 104;
+  --text-card: 255, 255, 255;
+  --bg-secondary-card: 143, 52, 67;
+  --bg-thirdary-card: 247, 130, 149;
+}
+
+
+@font-face {
+  font-family: "Indivisible";
+  src: url("./assets/fonts/fonnts.com-Indivisible_Variable.otf") format("opentype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  font-family: "Indivisible", sans-serif;
+}

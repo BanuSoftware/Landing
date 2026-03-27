@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Indivisible";
+  src: url("./assets/fonts/fonnts.com-Indivisible_Variable.otf") format("opentype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+*{
+    font-family: "Indivisible", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Title-Content {
+    display: grid;
+    grid-template-columns: 1fr 13fr;
+    align-items: center;
+    height: 34px;
+    margin-bottom: 10px;
+}
+
+#title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 95%;
+    letter-spacing: -0.04em;
+}
+
+.Icon {
+    width: 41px;
+    height: 41px;
+    margin-right: 15px;
+    margin-bottom: 7px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 34px;
+    width: max-content;
+    height: 30px;
+    position: relative; /* o absolute, según tu layout */
+    top: 10px;
+    left: 57px;
+    font-size: 16px;
+}
+
+
+#right {
+    font-weight: 400;
+    line-height: 95%;
+    letter-spacing: -0.08em;
+    width: 151px;
+}
+
+#left {
+    font-weight: 500;
+    line-height: 95%;
+    letter-spacing: -0.08em;
+    width: 151px;
+}
